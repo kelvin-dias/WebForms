@@ -26,8 +26,8 @@ namespace Persistencia.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Categoria")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<long?>("CategoriaId")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Nome")
                         .HasColumnType("nvarchar(max)");
@@ -36,6 +36,8 @@ namespace Persistencia.Migrations
                         .HasColumnType("float");
 
                     b.HasKey("ProdutoId");
+
+                    b.HasIndex("CategoriaId");
 
                     b.ToTable("Produtos");
                 });
@@ -53,6 +55,13 @@ namespace Persistencia.Migrations
                     b.HasKey("CategoriaId");
 
                     b.ToTable("Categorias");
+                });
+
+            modelBuilder.Entity("Modelo.Entidades.Produto", b =>
+                {
+                    b.HasOne("Modelo.Tabelas.Categoria", "Categoria")
+                        .WithMany("Produtos")
+                        .HasForeignKey("CategoriaId");
                 });
 #pragma warning restore 612, 618
         }

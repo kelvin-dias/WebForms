@@ -12,7 +12,7 @@ namespace ProjetoMarlinWebForms
         {
             if (IsPostBack) return;
 
-            //PopularDropdownCategoria();
+            PopularDropdownCategoria();
         }
 
         protected void btnSalvar_OnClick(object sender, EventArgs e)
@@ -24,12 +24,15 @@ namespace ProjetoMarlinWebForms
 
             produto.Nome = txtNome.Text;
             produto.Preco = Convert.ToDouble(txtPreco.Text);
-            produto.Categoria = "Teste";
+            produto.CategoriaId = Convert.ToInt32(ddlCategoria.SelectedValue);
 
 
             produtoDAL.GravarProduto(produto);
 
+            
             LimparCampos();
+
+            Response.Redirect("ConsultarProduto.aspx");
         }
 
 

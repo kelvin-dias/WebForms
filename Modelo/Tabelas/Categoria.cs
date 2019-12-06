@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modelo.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,5 +11,6 @@ namespace Modelo.Tabelas
     {
         public long? CategoriaId{ get; set; }
         public string Nome { get; set; }
+        public ICollection<Produto> Produtos { get; set; }
     }
 }

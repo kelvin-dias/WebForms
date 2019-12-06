@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modelo.Tabelas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,8 @@ namespace Modelo.Entidades
     {
         public long? ProdutoId { get; set; }
         public string Nome { get; set; }
-        public string Categoria { get; set; }
         public double Preco { get; set; }
+        public long? CategoriaId { get; set; }
+        public Categoria Categoria { get; set; }
     }
 }

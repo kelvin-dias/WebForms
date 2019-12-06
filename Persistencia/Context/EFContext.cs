@@ -9,7 +9,7 @@ namespace Persistencia.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Fadami\source\repos\ProjetoMarlinWebForms\ProjetoMarlinWebForms\App_Data\MarlinBd.mdf;Integrated Security=True");
+            optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Fadami\source\repos\webforms\ProjetoMarlinWebForms\App_Data\WebFormsBD.mdf;Integrated Security=True");
         }
     }
 }

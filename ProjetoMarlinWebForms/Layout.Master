@@ -8,10 +8,13 @@
     <title></title>
 
     <%--CSS--%>
-    <link href="Templates/assets/css/codebase.min.css" rel="stylesheet" />
+    <link href="Template/assets/css/codebase.min.css" rel="stylesheet" />
 
     <%--JS--%>
-    <script src="Templates/assets/js/codebase.min.js"></script>
+    <script src="Template/assets/js/core/jquery.min.js"></script>
+    <script src="Template/assets/js/codebase.js"></script>
+    <script src="Template/assets/js/core/jquery.scrollLock.min.js"></script>
+    <script src="Template/assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -26,13 +29,12 @@
                 <a class="nav-link" href="/AdicionarProduto.aspx">Adicionar Produto</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/ListarProduto.aspx">Link</a>
+                <a class="nav-link" href="/ConsultarProduto.aspx">Listar Produtos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/AdicionarCategoria.aspx">Adicionar Categoria</a>
             </li>
         </ul>
-
-
-
-
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
